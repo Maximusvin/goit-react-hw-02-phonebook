@@ -9,6 +9,16 @@ class FormPhone extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    console.log(!this.state.name, !this.state.number);
+    if (!this.state.name || !this.state.number) {
+      alert('Вы не ввели все контактные данные');
+      return;
+    }
+
+    if (Number.isNaN(+this.state.number)) {
+      alert('Телефонный номер должен содержать только цифры');
+      return;
+    }
     this.props.addContactPhone(this.state);
     this.setState({
       name: '',

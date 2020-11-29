@@ -23,3 +23,10 @@
   text-align: left;
   margin-bottom: 25px;
 }
+
+.btn {
+  border: none;
+  padding: 0;
+  margin-left: 10px;
+  display: inline;
+}
